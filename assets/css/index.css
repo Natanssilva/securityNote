@@ -1,0 +1,43 @@
+body,html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+  }
+
+
+  .button {
+    display: inline-flex; 
+    align-items: center;  
+    gap: 8px; /* Espaço entre o texto e o ícone */
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 100vh;
+}
+
+.button-personality{
+    background-color: #6D64D1;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.5rem;
+    text-align: center;
+}
