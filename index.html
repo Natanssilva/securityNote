@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecurityNote</title>
+    <link rel="manifest" href="manifest.json" />
+    <script src="/js/service-worker.js" defer></script>
+    <script src="/js/index.js" defer></script>
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img style="height: 30vh" src="/assets/img/logo.png" alt="logo" />
+      <h1>Bem-vindo !</h1>
+      <p>Suas anotações em um lugar seguro!</p>
+      <p>Para continuar, digite seu nome a baixo.</p>
+      <span style="padding: 10px">
+        <input
+          id="input-name"
+          style="background-color: white; color: black; border-color: red"
+          class="input"
+          type="text"
+          required
+        />
+
+        <p id="error-message" style="color: red; font-size: 1rem">
+          Nome inválido
+        </p>
+      </span>
+
+      <div style="display: flex; gap: 12px">
+        <button
+          id="bttn"
+          style="background-color: #6d64d1; color: white"
+          class="button is-link"
+          disabled
+        >
+          <a href="#" style="text-decoration: none; color: white"> Iniciar </a>
+        </button>
+      </div>
+     
+      <button class="btn" id="installBtn" style="display: none">
+        Instalar App
+      </button>
+    </div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/js/service-worker.js")
+          .then(() => console.log("Service Worker registrado com sucesso!"))
+          .catch((error) =>
+            console.error("Erro ao registrar Service Worker:", error)
+          );
+      }
+    </script>
+  </body>
+</html>
