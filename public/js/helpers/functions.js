@@ -1,4 +1,19 @@
+/**
+ * @description Função que seta a visibilidade de um input de senha
+ * @param {Element} imgElement 
+ * @param {Element} inputElement 
+ */
+export function setVisibility(imgElement, inputElement) {
 
+  imgElement.addEventListener("click", () => {
+    const isPassword = inputElement.type === "password";
+    inputElement.type = isPassword ? "text" : "password";
+    
+    imgElement.src = isPassword
+      ? "../public/img/eyeClosed.svg"
+      : "../public/img/eye.svg";
+  });
+}
 
 /**
  * @description Função que redireciona o usuário para outra página

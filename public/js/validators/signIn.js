@@ -1,15 +1,11 @@
-import { redirectTo, showFeedback } from "../helpers/functions.js";
+import { redirectTo, setVisibility, showFeedback } from "../helpers/functions.js";
 
 const imgPassword = document.querySelector("#showPassword");
-const input = document.querySelector("#password");
+const inputPassword = document.querySelector("#password");
 
-imgPassword.addEventListener("click", () => {
-  const isPassword = input.type === "password";
-  input.type = isPassword ? "text" : "password";
-  imgPassword.src = isPassword
-    ? "../public/img/eyeClosed.svg"
-    : "../public/img/eye.svg";
-});
+if (imgPassword && inputPassword) {
+  setVisibility(imgPassword, inputPassword);
+}
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -63,6 +59,8 @@ form.addEventListener("submit", async (event) => {
     localStorage.setItem("credentialId", credential.id);
 
     showFeedback("Cadastro feito com sucesso e chave criada!", "success");
+    setTimeout(() => redirectTo("../pages/home.html"), 2500);
+
   } catch (err) {
     console.error("Erro ao registrar WebAuthn:", err);
     showFeedback(
@@ -70,6 +68,6 @@ form.addEventListener("submit", async (event) => {
       "info"
     );
 
-    setTimeout(() => redirectTo("../pages/home.html"), 3500);
+    setTimeout(() => redirectTo("../pages/home.html"), 2500);
   }
 });
