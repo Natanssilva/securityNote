@@ -2,6 +2,8 @@
 
 SecurityNote é uma aplicação web progressiva (PWA) com fins de estudo desenvolvida para criar anotações por voz e simular um fluxo de usuários no localStorage utilizando Web Authentication API.
 
+- [Deploy](https://securitynote.netlify.app/)
+
 ## 🚀 Funcionalidades
 
 - 🎤 Gravação de voz com transcrição automática.
