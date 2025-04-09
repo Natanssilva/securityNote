@@ -20,6 +20,7 @@ if ("serviceWorker" in navigator) {
     });
     
     installBtn.addEventListener('click', async () => {
+      console.log('eae')
         if (deferredPrompt) {
             deferredPrompt.prompt();
 
