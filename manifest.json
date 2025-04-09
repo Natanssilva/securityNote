@@ -1,0 +1,22 @@
+{
+    "name": "SecurityNote",
+    "short_name": "SecurityNote",
+    "description": "App for securityNotes",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ff0000",
+    "icons": [
+      {
+        "src": "icons/android-launchericon-192-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/android-launchericon-512-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
